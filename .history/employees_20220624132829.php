@@ -234,7 +234,6 @@
                             align: 'center',
                             title: 'Emp ID',
                             width: "05%",
-                            sortable:true,
                         },
 
                         {
@@ -243,7 +242,6 @@
                             align: 'center',
                             title: 'First Name',
                             width: "11%",
-                            sortable:true,
                         },
                         {
                             field: 'lastname',
@@ -251,7 +249,6 @@
                             align: 'center',
                             title: 'Last Name',
                             width: "11%",
-                            sortable:true,
 
                         },
                         {
@@ -260,7 +257,7 @@
                             align: 'center',
                             title: 'D.O.B',
                             width: "05%",
-                            sortable:true,
+                            sortable:true;
                         },
                         {
                             field: 'contactdeatils',

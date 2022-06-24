@@ -234,7 +234,6 @@
                             align: 'center',
                             title: 'Emp ID',
                             width: "05%",
-                            sortable:true,
                         },
 
                         {
@@ -243,7 +242,6 @@
                             align: 'center',
                             title: 'First Name',
                             width: "11%",
-                            sortable:true,
                         },
                         {
                             field: 'lastname',
@@ -251,30 +249,28 @@
                             align: 'center',
                             title: 'Last Name',
                             width: "11%",
-                            sortable:true,
 
                         },
                         {
                             field: 'dob',
                             halign: 'center',
                             align: 'center',
-                            title: 'D.O.B',
-                            width: "05%",
-                            sortable:true,
+                            title: 'Date of Birth',
+                            width: "08%",
                         },
                         {
                             field: 'contactdeatils',
                             halign: 'center',
                             align: 'center',
                             title: 'contact deatils',
-                            width: "14%",
+                            width: "12%",
                         },
                         {
                             field: 'address',
                             halign: 'center',
                             align: 'center',
                             title: 'Address',
-                            width: "25%",
+                            width: "22%",
                         },
 
                         {
@@ -303,7 +299,7 @@
                         {
                             field: 'action',
                             title: 'Actions',
-                            width: '05%',
+                            width: '07%',
                             align: 'center',
                             formatter: function(value, row, index) {
                                 if (typeof row.employeeID != 'undefined') {

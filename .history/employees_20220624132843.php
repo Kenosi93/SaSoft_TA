@@ -234,7 +234,6 @@
                             align: 'center',
                             title: 'Emp ID',
                             width: "05%",
-                            sortable:true,
                         },
 
                         {

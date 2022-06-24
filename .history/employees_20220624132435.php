@@ -234,7 +234,6 @@
                             align: 'center',
                             title: 'Emp ID',
                             width: "05%",
-                            sortable:true,
                         },
 
                         {
@@ -243,7 +242,6 @@
                             align: 'center',
                             title: 'First Name',
                             width: "11%",
-                            sortable:true,
                         },
                         {
                             field: 'lastname',
@@ -251,7 +249,6 @@
                             align: 'center',
                             title: 'Last Name',
                             width: "11%",
-                            sortable:true,
 
                         },
                         {
@@ -260,21 +257,20 @@
                             align: 'center',
                             title: 'D.O.B',
                             width: "05%",
-                            sortable:true,
                         },
                         {
                             field: 'contactdeatils',
                             halign: 'center',
                             align: 'center',
                             title: 'contact deatils',
-                            width: "14%",
+                            width: "13%",
                         },
                         {
                             field: 'address',
                             halign: 'center',
                             align: 'center',
                             title: 'Address',
-                            width: "25%",
+                            width: "23%",
                         },
 
                         {
