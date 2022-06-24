@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Title Page-->
+    <title>Add employee</title>
+    <link href="css/main.css" rel="stylesheet" media="all">
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
