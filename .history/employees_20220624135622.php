@@ -425,7 +425,7 @@
                                     });
 
                                 }
-                            }).fail(function(data) {
+                            }).error(function(data) {
                                 noty({
                                     text: data,
                                     type: "error",
