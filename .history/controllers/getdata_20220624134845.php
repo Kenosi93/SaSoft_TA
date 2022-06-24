@@ -43,7 +43,7 @@ class GetEmployee
             $address                        .= $value['poscode'];
             $return[$key]['address']        = $address;
             //Get skills from skills table
-            $db->where('status', 'A');
+            $db->where('employeeID', 'A');
             $db->where('employeeID', $value['employeeID']);
             $getSkills = $db->get("skills");
 
@@ -104,7 +104,6 @@ class GetEmployee
                 $return[0]['country']         = $query['country'];
                 $return[0]['status']          = $query['status'];
                 //Get skills from skills table
-                $db->where('status', 'A');
                 $db->where('employeeID', $query['employeeID']);
                 $getSkills = $db->get("skills");
 

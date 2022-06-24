@@ -211,7 +211,6 @@ class StoreEmployee
                 if ($updateEmp) {
                     //Delete old skills records and store new ones
                     //It is simple to delete them then store than update
-                    $db->where('status', 'A');
                     $db->where('employeeID', $query['employeeID']);
                     $deleteOldSkills = $db->delete('skills');
 
