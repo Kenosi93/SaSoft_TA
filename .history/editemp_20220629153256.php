@@ -84,7 +84,7 @@ if (empty($getEMP[0]['error'])) {
             <ul id="ulid">
                 <li id="liid"><a href="index.html">Home</a></li>
                 <li id="liid"><a href="addemp.html">Add Employee</a></li>
-                <li id="liid"><a href="index.html#callEdit">Edit Employee</a></li>
+                <li id="liid"><a href="index.php#callEdit">Edit Employee</a></li>
                 <li id="liid"><a href="employees.html">Search Employee</a></li>
             </ul>
             </br>

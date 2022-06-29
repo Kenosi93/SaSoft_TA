@@ -36,11 +36,11 @@
             overflow: hidden;
             background-color: #333;
         }
-
+        
         #liid {
             float: left;
         }
-
+        
         #liid a {
             display: block;
             color: white;
@@ -48,11 +48,11 @@
             padding: 14px 16px;
             text-decoration: none;
         }
-
+        
         #liid a:hover:not(.active) {
             background-color: #111;
         }
-
+        
         .active {
             background-color: #993366;
         }
@@ -64,10 +64,10 @@
         <div class="wrapper wrapper--w680">
             <!-- navigation menu -->
             <ul id="ulid">
-                <li id="liid"><a href="index.php">Home</a></li>
-                <li id="liid"><a href="addemp.php">Add Employee</a></li>
+                <li id="liid"><a href="index.html">Home</a></li>
+                <li id="liid"><a href="addemp.html">Add Employee</a></li>
                 <li id="liid"><a href="index.php#callEdit">Edit Employee</a></li>
-                <li id="liid"><a class="active" href="employees.php">Search Employee</a></li>
+                <li id="liid"><a class="active" href="employees.html">Search Employee</a></li>
             </ul>
             </br>
             <div class="card card-4">
@@ -149,7 +149,7 @@
                 $("#div_ls").hide();
                 $("#div_em").hide();
                 $('#divDG').hide();
-                
+
                 clearFields();
                 $.noty.closeAll();
 
@@ -234,7 +234,7 @@
                             align: 'center',
                             title: 'Emp ID',
                             width: "05%",
-                            sortable:true,
+                            sortable: true,
                         },
 
                         {
@@ -243,33 +243,29 @@
                             align: 'center',
                             title: 'First Name',
                             width: "11%",
-                            sortable:true,
-                        },
-                        {
+                            sortable: true,
+                        }, {
                             field: 'lastname',
                             halign: 'center',
                             align: 'center',
                             title: 'Last Name',
                             width: "11%",
-                            sortable:true,
+                            sortable: true,
 
-                        },
-                        {
+                        }, {
                             field: 'dob',
                             halign: 'center',
                             align: 'center',
                             title: 'D.O.B',
                             width: "05%",
-                            sortable:true,
-                        },
-                        {
+                            sortable: true,
+                        }, {
                             field: 'contactdeatils',
                             halign: 'center',
                             align: 'center',
                             title: 'contact deatils',
                             width: "14%",
-                        },
-                        {
+                        }, {
                             field: 'address',
                             halign: 'center',
                             align: 'center',
@@ -283,8 +279,7 @@
                             align: 'center',
                             title: 'Skills',
                             width: "08%",
-                        },
-                        {
+                        }, {
                             field: 'experience',
                             halign: 'center',
                             align: 'center',
@@ -336,7 +331,7 @@
 
                 },
                 onLoadSuccess: function(data) {
-      
+
                     if (data.rows.length == 0) {
                         noty({
                             text: 'No records found',
@@ -391,57 +386,55 @@
                 theme: 'relax',
                 type: 'alert',
                 buttons: [{
-                        addClass: 'btn btn-danger',
-                        text: '<p style="color:red">Yes</p>',
-                        onClick: function($noty) {
+                    addClass: 'btn btn-danger',
+                    text: '<p style="color:red">Yes</p>',
+                    onClick: function($noty) {
 
-                            $.ajax({
-                                url: 'controllers/storeData.php',
-                                async: false,
-                                dataType: 'json',
-                                method: 'POST',
-                                data: {
-                                    _FUNCTION: 'deleteEmployee',
-                                    id: id,
-                                }
-                            }).done(function(data) {
-                                $noty.close();
-                                if (typeof data['Error'] == 'undefined') {
-                                    noty({
-                                        text: data['Results'],
-                                        type: "success",
-                                        layout: "topCenter",
-                                        callback: {
-                                            onClose: function() {
-                                                $('#DG').datagrid("reload");
-                                            },
-                                        },
-                                    });
-                                } else {
-                                    noty({
-                                        text: data['Error'],
-                                        type: "error",
-                                        layout: "topCenter"
-                                    });
-
-                                }
-                            }).fail(function(data) {
+                        $.ajax({
+                            url: 'controllers/storeData.php',
+                            async: false,
+                            dataType: 'json',
+                            method: 'POST',
+                            data: {
+                                _FUNCTION: 'deleteEmployee',
+                                id: id,
+                            }
+                        }).done(function(data) {
+                            $noty.close();
+                            if (typeof data['Error'] == 'undefined') {
                                 noty({
-                                    text: data,
+                                    text: data['Results'],
+                                    type: "success",
+                                    layout: "topCenter",
+                                    callback: {
+                                        onClose: function() {
+                                            $('#DG').datagrid("reload");
+                                        },
+                                    },
+                                });
+                            } else {
+                                noty({
+                                    text: data['Error'],
                                     type: "error",
                                     layout: "topCenter"
                                 });
+
+                            }
+                        }).fail(function(data) {
+                            noty({
+                                text: data,
+                                type: "error",
+                                layout: "topCenter"
                             });
-                        }
-                    },
-                    {
-                        addClass: 'btn btn-warning',
-                        text: '<p style="color:orange">Cancel</p>',
-                        onClick: function($noty) {
-                            $noty.close();
-                        }
+                        });
                     }
-                ]
+                }, {
+                    addClass: 'btn btn-warning',
+                    text: '<p style="color:orange">Cancel</p>',
+                    onClick: function($noty) {
+                        $noty.close();
+                    }
+                }]
             });
 
         }
