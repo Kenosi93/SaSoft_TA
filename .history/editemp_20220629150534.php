@@ -334,10 +334,10 @@ if (empty($getEMP[0]['error'])) {
                 if (counter > 0) {
                     $('#div_skills_' + counter).hide();
                     $('#addField').show();
-                    clearFields(counter);
+                    clearFields(count);
                     counter--;
 
-            
+                    console.log(counter);
                     $('#BTN').appendTo('#BTN_' + counter)
 
                     if (counter == 0) {

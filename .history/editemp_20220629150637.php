@@ -337,7 +337,7 @@ if (empty($getEMP[0]['error'])) {
                     clearFields(counter);
                     counter--;
 
-            
+                    console.log(counter);
                     $('#BTN').appendTo('#BTN_' + counter)
 
                     if (counter == 0) {
